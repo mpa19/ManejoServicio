@@ -1,13 +1,13 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 21
-    buildToolsVersion "23.0.2"
+    compileSdkVersion 26
+    buildToolsVersion "27.0.3"
 
     defaultConfig {
         applicationId "com.android.mdw.demo"
-        minSdkVersion 12
-        targetSdkVersion 21
+        minSdkVersion 21
+        targetSdkVersion 26
     }
 
     buildTypes {
