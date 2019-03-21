@@ -5,4 +5,14 @@
     <string name="iniserv">Servicio Iniciado</string>
     <string name="creaserv">Servicio Creado</string>
     <string name="finaserv">Servicio Finalizado</string>
+    <string name="toastB">Intent recibido ElReceptor - Inicio reproducción </string>
+    <string name="toastI">Intent recibido ElServicio - Inicio reproducción </string>
+    <string name="cancion">cancion</string>
+    <string name="detener">detener</string>
+    <string name="sonido">sonido</string>
+    <string name="tipo">tipo</string>
+
+
+
+
 </resources>

@@ -13,20 +13,33 @@ public class Main extends Activity implements OnClickListener {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.main);
 
-    Button btnInicio = (Button) findViewById(R.id.btnInicio);
+    Button btnSonido = (Button) findViewById(R.id.btnSonido);
     Button btnFin = (Button) findViewById(R.id.btnFin);
+    Button btnCancion = (Button) findViewById(R.id.btnCancion);
 
-    btnInicio.setOnClickListener(this);
+    btnSonido.setOnClickListener(this);
     btnFin.setOnClickListener(this);
+    btnCancion.setOnClickListener(this);
+
   }
 
   public void onClick(View src) {
+    Intent i;
     switch (src.getId()) {
-    case R.id.btnInicio:      
-      startService(new Intent(this, ElServicio.class));
+    case R.id.btnSonido:
+      i = new Intent(this, ElReceptor.class);
+      i.putExtra(getString(R.string.tipo), getString(R.string.sonido));
+      sendBroadcast(i);
       break;
     case R.id.btnFin:
-      stopService(new Intent(this, ElServicio.class));
+      i = new Intent(this, ElReceptor.class);
+      i.putExtra(getString(R.string.tipo), getString(R.string.detener));
+      sendBroadcast(i);
+      break;
+    case R.id.btnCancion:
+      i = new Intent(this, ElReceptor.class);
+      i.putExtra(getString(R.string.tipo), getString(R.string.cancion));
+      sendBroadcast(i);
       break;
     }
   }

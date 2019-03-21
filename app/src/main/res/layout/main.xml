@@ -14,17 +14,30 @@
 		android:layout_width="match_parent" 
 		android:layout_height="wrap_content"
 		android:gravity="center">
-		<Button 
-			android:text="Inicio" 
-			android:id="@+id/btnInicio" 
-			android:layout_width="wrap_content" 
-			android:layout_height="wrap_content">
-		</Button>
-		<Button 
-			android:layout_width="wrap_content" 
+
+		<Button
+			android:id="@+id/btnSonido"
+			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
-			android:text="Detener" 
-			android:id="@+id/btnFin">
-		</Button>		
+			android:text="SONIDO"></Button>
+
+		<Button
+			android:id="@+id/btnCancion"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="CANCION"></Button>
+	</LinearLayout>
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:gravity="center">
+
+		<Button
+			android:id="@+id/btnFin"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="DETENER"></Button>
+
 	</LinearLayout>
 </LinearLayout>
