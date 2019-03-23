@@ -38,13 +38,12 @@ public class ElServicio extends Service {
 	public int onStartCommand(Intent intent, int flags, int startid) {
 		Toast.makeText(this, R.string.iniserv, Toast.LENGTH_LONG).show();
 		String extra = intent.getExtras().getString(getString(R.string.tipo));
-		if (extra.equals(getString(R.string.cancion))){
-			playerCancion.start();
-		} else if (extra.equals(getString(R.string.sonido))) {
+		if (extra.equals(getString(R.string.sonido))) {
 			playerSonido.start();
+		}else {
+			playerCancion.start();
 		}
-
-		return startid;		
+		return startid;
 	}	
 
 }

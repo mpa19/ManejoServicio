@@ -2,6 +2,7 @@ package com.android.mdw.demo;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.content.IntentFilter;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -12,6 +13,10 @@ public class Main extends Activity implements OnClickListener {
   public void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.main);
+
+    IntentFilter receiverFilter = new IntentFilter(Intent.ACTION_HEADSET_PLUG);
+    ElReceptor receiver = new ElReceptor();
+    registerReceiver(receiver, receiverFilter );
 
     Button btnSonido = (Button) findViewById(R.id.btnSonido);
     Button btnFin = (Button) findViewById(R.id.btnFin);
